@@ -63,7 +63,7 @@ def adicionar():
         conn = mysql.connector.connect(**db_config)
         cursor = conn.cursor()
         
-        cursor.execute("INSERT INTO produto (codigo, nome, valor) VALUES (%s, %s, %s)", (codigo_produto, nome_produto, valor_produto))
+        cursor.execute("INSERT INTO produto (codigo, nome, valor) VALUES (%s, %s, %s)", (codigo_produto, nome_produto, preco_produto))
         conn.commit()
         
         cursor.close()
